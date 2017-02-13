@@ -1,0 +1,18 @@
+<%= form_for(@post) do |f| %>
+
+<%= @post.errors.full_messages.each do |post| %>
+       <li><%= post %></li>
+       <% end %>
+  
+    <%= f.label :first_name %><br><br>
+    <%= f.text_field :first_name %>
+  
+    <%= f.label :last_name %><br><br>
+    <%= f.text_field :last_name %>
+  
+    <%= f.label :salary %><br><br>
+    <%= f.number_field :salary %>
+  
+    <%= f.submit %>
+ 
+<% end %>
